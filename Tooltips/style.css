@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: url(jojo.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.avatar:hover::before {
+  content: "Giorno and Golden Wind";
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  border-radius: 7px;
+  padding: 10px 20px;
+  background-color: grey;
+  color: white;
+  font-size: 1.5em;
+  top: -100px;
+  animation: appear 200ms both;
+}
+
+.avatar:hover::after {
+  content: "";
+  position: absolute;
+  background-color: grey;
+  height: 20px;
+  width: 20px;
+  top: -30px;
+  left: 50%;
+  transform: rotate(45deg) translateX(-50%);
+  animation: appear 200ms both;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
