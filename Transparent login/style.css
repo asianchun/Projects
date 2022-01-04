@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-image: url(nature.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+input {
+  border: 1px black solid;
+  border-radius: 3px;
+}
+
+.main {
+  width: 350px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  padding: 10px;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.sign-in {
+  color: white;
+  background-color: transparent;
+  margin-top: 25px;
+  border: 1px blue solid;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.label {
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
