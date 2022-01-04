@@ -12,6 +12,9 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .full-screen video {
@@ -27,10 +30,9 @@ body {
 }
 
 .content {
-  width: max-content;
-  font-size: 2.5em;
+  font-size: 70px;
   background-color: white;
-  padding: 10px;
-  margin: auto;
-  margin-top: 50px;
+  padding: 20px;
+  color: #333;
+  margin-top: 100px;
 }
