@@ -30,7 +30,7 @@ body {
 .avatar::after {
   --scale: 0;
   --arrow-size: 20px;
-  --tool-color: grey;
+  --tool-color: rgb(207, 177, 3);
 
   position: absolute;
   left: 50%;
