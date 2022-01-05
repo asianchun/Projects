@@ -20,43 +20,51 @@ body {
   position: relative;
   width: 200px;
   height: 200px;
-  background: url(jojo.png);
+  background-image: url(jojo.png);
   background-position: center;
   background-size: cover;
   border-radius: 50%;
 }
 
-.avatar:hover::before {
-  content: "Giorno and Golden Wind";
+.avatar::before,
+.avatar::after {
+  --scale: 0;
+  --arrow-size: 20px;
+  --tool-color: grey;
+
   position: absolute;
-  width: 100%;
+  left: 50%;
+  top: -0.5rem;
+  transform: translateX(-50%) translateY(var(--translate-y, 0))
+    scale(var(--scale));
+  transition: 150ms transform;
+}
+
+.avatar::before {
+  --translate-y: calc(-100% - var(--arrow-size));
+
+  content: attr(data-tooltip);
+  width: max-content;
+  max-width: 100%;
   text-align: center;
   border-radius: 7px;
   padding: 10px 20px;
-  background-color: grey;
   color: white;
-  font-size: 1.5em;
-  top: -100px;
-  animation: appear 200ms both;
+  background-color: var(--tool-color);
+  font-size: 1.5rem;
+  transform-origin: bottom center;
 }
 
-.avatar:hover::after {
+.avatar::after {
+  --translate-y: calc(-1 * var(--arrow-size));
+
   content: "";
-  position: absolute;
-  background-color: grey;
-  height: 20px;
-  width: 20px;
-  top: -30px;
-  left: 50%;
-  transform: rotate(45deg) translateX(-50%);
-  animation: appear 200ms both;
+  border: var(--arrow-size) solid transparent;
+  border-top-color: var(--tool-color);
+  transform-origin: top center;
 }
 
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.avatar:hover::before,
+.avatar:hover::after {
+  --scale: 1;
 }
