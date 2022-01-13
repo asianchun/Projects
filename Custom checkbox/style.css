@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.check-container {
+  margin: 20px;
+}
+
+.check-container label {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+}
+
+.check-container input[type="checkbox"] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.check-container label::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  border: 0.05em solid black;
+  border-radius: 0.15em;
+  margin-right: 0.5em;
+}
+
+.check-container label:hover::before,
+.check-container input[type="checkbox"]:hover + label::before {
+  background-color: #35e07d;
+}
+
+.check-container input[type="checkbox"]:checked + label::before {
+  background-color: #27ae60;
+  content: "\002714";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.check-container input[type="checkbox"]:focus + label::before {
+  box-shadow: 0 0 10px black;
+}
