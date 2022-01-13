@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dfdfdf;
+  perspective: 800px;
+}
+
+.btn {
+  position: relative;
+  height: 100px;
+  width: 300px;
+  transform: translateZ(-50px);
+  transform-style: preserve-3d;
+  transition: transform 300ms ease-in-out;
+}
+
+.btn:hover {
+  transform: rotateX(-90deg) translateY(50px);
+}
+
+.side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bold;
+  backface-visibility: hidden;
+}
+
+.default {
+  color: #069;
+  border: 4px solid #069;
+  background-color: white;
+  transform: translateZ(50px);
+}
+
+.hover {
+  background-color: #069;
+  color: white;
+  transform: rotateX(90deg) translateZ(50px);
+}
