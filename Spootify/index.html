@@ -11,33 +11,36 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
     <title>Spotify</title>
   </head>
   <body>
-    <header>
+    <header class="main-header">
       <a href="/" class="logo">
         <img src="images/logo.png" alt="logo" />
-        <div class="logo-name">Soundwave</div>
+        <div>Soundwave</div>
       </a>
-      <nav>
+      <nav class="main-nav">
         <ul>
           <li><a href="discover.html">Discover</a></li>
           <li><a href="join.html">Join</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <img src="images/landing-page-girl.png" alt="a girl" />
-      <div class="info">
-        <div class="info-header">Feel The Music</div>
-        <div class="info-text">
-          Stream over 20 thousand songs with one click
-        </div>
-        <button class="join-now-btn">Join Now</button>
+    <section class="main-section">
+      <div class="image-wrap">
+        <div class="image"></div>
       </div>
-    </main>
-    <div class="circle purple-big"></div>
-    <div class="circle blue-small"></div>
-    <div class="circle purple-small"></div>
+      <div class="info">
+        <h1 class="info-header">Feel The Music</h1>
+        <span class="info-text">
+          Stream over 20 thousand songs with one click
+        </span>
+        <a href="join.html" class="join-now-btn">Join Now</a>
+      </div>
+    </section>
+    <div class="purple-big"></div>
+    <div class="blue-small"></div>
+    <div class="pink-small"></div>
   </body>
 </html>
