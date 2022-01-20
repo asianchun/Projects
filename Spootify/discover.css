@@ -1,0 +1,53 @@
+.main-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.album-image {
+  width: 30vw;
+  margin-left: 2rem;
+  height: auto;
+  max-width: 350px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.info-icons {
+  display: flex;
+}
+
+.icon-wrap {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0.75rem;
+  background-color: #202027;
+}
+
+.icon-wrap img {
+  width: 40px;
+}
+
+@media (max-width: 800px) {
+  .main-section {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .album-image {
+    margin-top: 2rem;
+    height: 30vh;
+    width: auto;
+  }
+}
