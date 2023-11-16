@@ -12,7 +12,7 @@ Welcome to a collection of HTML & CSS projects! You will find 13 various project
 
 ## Demo
 
-Check out the live demo of the projects [here](#).
+Check out the live demo of the projects [here](https://small-snow-8589.on.fleek.co/).
 
 ## Application Descriptions
 
